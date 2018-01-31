@@ -13,12 +13,12 @@ function Calculator($scope, $location, $timeout) {
     $scope.total_davacki_bez_personalen_koficent = $scope.k.penzisko + $scope.k.zdravstveno + $scope.k.pridones + $scope.k.boluvanje;
     $scope.k.neto_to_bruto_konficent = 1 - ($scope.total_davacki_bez_personalen_koficent) - (1 - ($scope.total_davacki_bez_personalen_koficent)) * $scope.k.personalen;
 
-    $scope.danocno_osloboduvanje = 7456;
-    $scope.referentna_vrednost = 32877;
-    $scope.max_osnovica_za_pridonesi = $scope.referentna_vrednost * 12;
+    $scope.danocno_osloboduvanje = 7531;
+    $scope.referentna_vrednost = 34079;
+    $scope.max_osnovica_za_pridonesi = $scope.referentna_vrednost * 16;
     $scope.min_osnovica_za_pridonesi = Math.round($scope.referentna_vrednost / 2);
-    $scope.min_neto_plata = 9590;
-    $scope.min_bruto_plata = 16439; // 50% од 32.877
+    $scope.min_neto_plata = 12000;
+    $scope.min_bruto_plata = 17130; // 50% од 34079
 
     var calculate = function (bruto) {
         var osnovica_za_pridonesi = bruto;
